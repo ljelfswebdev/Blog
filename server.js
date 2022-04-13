@@ -30,6 +30,8 @@ app.use(
     })
 );
 
+app.get('/', (req, res) => res.send('Home Page Route'));
+
 //autoload routes
 readdirSync("./routes").map((r) => app.use("/api", require(`./routes/${r}`)));
 
